@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		html {
+			font-size: 30px;
+		}
+
+		body {
+			font-size: 20px;
+		}
+
+		.wrap {
+			/*font-size: 30px;*/
+			height: 5em;
+			width: 20rem;
+			background-color: aqua;
+			/* em -> 현재 요소의 font-size 기준 */
+			/*부모의 폰트 사이즈도 봐야됨 */
+
+			/*rem -> 루트의 폰트사이즈 기준
+			크로스 플랫폼에서 반응형으로 설계 가능 */
+		}
+
+		.div1 {
+			background-color: brown;
+			height: calc(50% - 1em);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap"></div>
+	<div class="div1"></div>
+	<div class="div2"></div>
+</body>
+
+</html>
