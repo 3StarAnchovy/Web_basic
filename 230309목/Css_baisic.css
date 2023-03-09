@@ -1,0 +1,21 @@
+/*타입선택자 */
+p {
+	background-color :aqua;
+}
+
+/*클래스선택자 */
+.first {
+	background-color: bisque;
+}
+
+/*id 선택자 */
+#first_p{
+	background-color: aquamarine;
+}
+
+div > p {
+	background-color: blue;
+}
+
+/* 전체선택자 < 타입선택자 < 클래스선택자 < id 선택자
+/* 구체적일 수록 더 높음
