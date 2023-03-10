@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.parent {
+			position: relative;
+			height: 150vh;
+			background-color: aquamarine;
+		}
+		.child{
+			font-size: 30px;
+		}
+		.static{
+			position: static;
+			width: 3em;
+			height: 3em;
+			border: 3px solid black;
+			background-color: #f6e58d;
+		}
+
+		.relative{
+			position: relative;
+			top : 1em;
+			width: 4em;
+			height: 4em;
+			border: 3px solid black;
+			background-color: #ff7979;
+		}
+
+		.absolute{
+			position: absolute;
+			width: 5em;
+			height: 5em;
+			border: 3px solid black;
+			background-color: #2980b9;
+		}
+
+		.fixed{
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			width: 6em;
+			height: 6em;
+			border: 3px solid black;
+			background-color: #8e44ad;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="parent">
+		<div class="child static">static</div>
+		<div class="child relative">relative</div>
+		<div class="child absolute">absolute</div>
+		<div class="child fixed">fixed</div>
+	</div>
+</body>
+
+</html>

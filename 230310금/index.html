@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<script>
+		func1();
+		//1. 함수 선언문
+		function func1() {
+			console.log("응애 나 함수 선언문");
+		}
+
+		//func2(); //var fun2가 호이스팅되서 undefined
+		//2. 함수 표현식
+
+		var func2 = function () {
+			console.log("함수 표현식 호출");
+		};
+		func2();
+
+		//parm 1 = callback_method
+		//parm 2 = time
+		//기존에 있던 함수를 매개인자로써 전달해줌
+		//setTimeout의 첫번째 인자는 handler
+		setTimeout(func1,2000);
+
+		//1회성함수 만들어서 전달
+		setTimeout(function () {
+			console.log("callback 함수 실행");
+		}, 7000);
+
+		function callback(func)
+		{
+			setTimeout(func, 5000);
+		}
+
+		callback(function() {
+			console.log("ㅎㅇㅎㅇ");
+		})
+
+		console.log(window);
+	</script>
 </head>
+
 <body>
 
 </body>
+
 </html>

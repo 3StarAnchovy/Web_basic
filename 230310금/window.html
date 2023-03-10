@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+		/*
+		confirm : return true or false
+		*/
+		test = () => {
+			var user = confirm("알림창을 띄울까요")
+			if (user) {
+				alert("안녕하세염");
+			}
+		}
+		//test();
+
+		open_test = () => {
+			window.open("index.html");
+			//window.close();
+		}
+		//open_test();
+
+		prompt_test = () => {
+			var input = prompt("입력");
+			console.log(input);
+		};
+		//prompt_test();
+
+		setTimeout(function() {
+			location.href = "index.html";
+		}, 3000);
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
