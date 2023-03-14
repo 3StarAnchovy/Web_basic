@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,46 @@
 	<title>Document</title>
 	<script src="index.js"></script>
 </head>
+
 <body>
+	<button onclick="func1()">클릭</button>
+	<div class="div1" id="div1">
+	</div>
+
+	<button onclick="func2()">클릭</button>
+	<div class="div2" id="div2">
+	</div>
+
+	<script>
+		function func1() {
+			console.log("호출");
+			//1. 요소 생성
+			const input = document.createElement("input");
+			console.log(input); //이거 뭐임?
+			//2. 속성 추가
+			input.setAttribute("type", "text");
+			input.setAttribute("placeholder", "아이디입력");
+			console.log(input);
+			console.log(document);
+
+			//3. 자식 요소로 추가
+			document.getElementById("div1");
+			const div1 = document.getElementById("div1");
+			console.log(div1);
+			div1.appendChild(input);
+		}
+
+		function func2() {
+			console.log(div2); //id는 바로가져올수있긴함
+			const html = "<h1>제목</h1>"
+			//div2.innerText += "응애";
+			div2.innerText = html; // text node
+			div2.innerHTML = html; // element node
+		}
+	</script>
+
+
 
 </body>
+
 </html>

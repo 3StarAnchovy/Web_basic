@@ -46,3 +46,12 @@ for (let key in obj) {
 
 console.log(obj["a"]);
 console.log(obj.a);
+
+
+//생성자 함수 만들어서 사용
+function Student(no, name){
+	this.no = no;
+	this.name = name;
+}
+
+let student1 = new Student("1234", "연민호");

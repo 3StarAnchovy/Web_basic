@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+	<h1 class="title">ㅎㅇ</h1>
+</div>
+	<button onclick="removeH1()">삭제</button>
+
+	<script>
+		function removeH1()
+		{
+			//1. 삭제 요소 조회
+			const title = document.querySelector(".title");
+			console.log(title);
+
+			//2. 부모요소 조회
+			const parentNode = title.parentElement;
+			console.log(parentNode);
+
+			//3. 부모 요소로부터 자식 요소 삭제
+			parentNode.removeChild(title);
+		}
+	</script>
+</body>
+</html>
