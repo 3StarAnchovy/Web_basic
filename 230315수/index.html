@@ -31,6 +31,26 @@
 
 		const newObj = JSON.parse(str);
 		console.log(newObj);
+
+		const arr = JSON.parse("[1,2,3]");
+		console.log(arr);
+
+		console.clear();
+
+		//객체 복사, 주소 전달, 얕은 복사
+		const swallowObj = obj;
+		swallowObj.a = 30;
+		console.log(swallowObj);
+		console.log(obj);
+
+		console.clear();
+		//객체복사, 깊은 복사
+		//문자열화 후 다시 객체 화. 결과적으로 주소가 다른 새로운 객체가 생김
+		const deepObj = JSON.parse(JSON.stringify(obj));
+		obj.a = 5;
+		console.log("얕은복사",swallowObj); // +연산후 문자열
+		console.log("깊은복사", deepObj);
+		console.log(obj);
 	</script>
 </body>
 </html>

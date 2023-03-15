@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		const memberList = [{
+				id: "id1",
+				pwd: "pwd1"
+			},
+			{
+				id: "id1",
+				pwd: "pwd1"
+			},
+			{
+				id: "id1",
+				pwd: "pwd1"
+			}
+		];
+
+		//step 1. 문자열로 바꾸기
+		const str = JSON.stringify(memberList);
+		//step 2. 로컬 스토리지에 저장
+		localStorage.setItem("members",str);
+		//
+
+		//로컬 스토리지로부터 읽어오기
+		//step 1. 로컬스토리지에서 값 꺼내기
+		const member_str = localStorage.getItem("members");
+		console.log(member_str);
+		//step 2. 해당 값을 객체로 변경
+		const memberList2 = JSON.parse(member_str);
+		console.log(memberList2);
+
+		localStorage.removeItem("members"); // 특정 값만 삭제
+		localStorage.clear();//전체 삭제
+
+
+	</script>
+</body>
+
+</html>
