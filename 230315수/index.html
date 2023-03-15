@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		console.log("실행");
+
+		let obj = {
+			a : 1,
+			b : 2,
+			c : 3,
+		};
+
+		/*
+		시나리오.
+		서버에 객체를 전송하려함.
+		객체 그대로 보낼수는 없으니, 직렬화가 필요
+		*/
+		console.log(obj);
+		const str = JSON.stringify(obj);
+		console.log(str);
+		/*
+		클라이언트 입장에서, 객체를 전달받을 때
+		직렬화된 값을, 다시 json으로 파싱해야함
+		*/
+
+		const newObj = JSON.parse(str);
+		console.log(newObj);
+	</script>
+</body>
+</html>
