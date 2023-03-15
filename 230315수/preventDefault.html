@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class = "url">
+	<br>
+	<a class = "move_btn" href="https://project.ssafy.com">이동</a>
+
+	<script>
+		//a 태그 클릭시 이벤트 핸들링
+		//a태그의 본래 기능을 막을순 없을까?
+		const move_btn = document.querySelector(".move_btn");
+		move_btn.addEventListener("click", (e)=>{
+			//페이지 이동
+			const url = document.querySelector(".url").value;
+			console.log(url);
+
+			//해당 브라우저 창 열기
+			location.href = url;
+			//window.open(url);
+			e.preventDefault();
+
+		});
+	</script>
+</body>
+</html>

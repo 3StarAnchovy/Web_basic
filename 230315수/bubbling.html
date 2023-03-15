@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.grandParent {
+			background-color: aqua;
+			width: 300px;
+			height: 300px;
+		}
+
+		.parent {
+			background-color: brown;
+			width: 200px;
+			height: 200px;
+		}
+
+		.child {
+			background-color: cornsilk;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="grandParent" class="grandParent">
+		<div id="parent" class="parent">
+			<div id="child" class="child"></div>
+		</div>
+	</div>
+
+	<script>
+		grandParent.onclick = function()
+		{
+			console.log("grandParent 핸들링");
+		}
+
+		const parent = document.getElementById("parent");
+		//parent.onclick = function(){
+		//	console.log("parent 핸들링");
+		//}
+
+		parent.addEventListener("click", (e) => {
+			console.log("parent 핸들링");
+			console.log(e);
+			e.stopPropagation(); //이벤트 퍼지는거 정리
+		})
+
+		child.onclick = function()
+		{
+			console.log("child 핸들링");
+		}
+	</script>
+</body>
+
+</html>
